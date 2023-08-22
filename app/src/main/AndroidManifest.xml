@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.maahi.it.ts_st">
+
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="43"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Tsst">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity
+            android:name=".WebViewActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:label="@string/app_name"
+            android:name=".StatusActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+
+
+        <!--    <queries>-->
+        <!--        &lt;!&ndash; List of apps which you want to support for Intent pay &ndash;&gt;-->
+        <!--        <package android:name="com.google.android.apps.nbu.paisa.user" />-->
+        <!--        <package android:name="com.phonepe.app" />-->
+        <!--        &lt;!&ndash;-->
+        <!--             Specific intents you query for,-->
+        <!--             eg: for a custom share UI-->
+        <!--        &ndash;&gt;-->
+        <!--        <intent>-->
+        <!--            <action android:name="android.intent.action.SEND" />-->
+        <!--        </intent>-->
+        <!--    </queries>-->
+        <!--        <receiver-->
+        <!--            android:name="com.razorpay.RzpTokenReceiver"-->
+        <!--            android:exported="false">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="rzp.device_token.share" />-->
+        <!--            </intent-filter>-->
+        <!--        </receiver>-->
+
+        <!--        <activity-->
+        <!--            android:name="com.razorpay.CheckoutActivity"-->
+        <!--            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"-->
+        <!--            android:exported="true"-->
+        <!--            android:theme="@style/CheckoutTheme">-->
+        <!--            <intent-filter>-->
+        <!--                <action android:name="android.intent.action.MAIN" />-->
+
+        <!--                <data-->
+        <!--                    android:host="rzp.io"-->
+        <!--                    android:scheme="io.rzp" />-->
+        <!--            </intent-filter>-->
+        <!--        </activity>-->
+
+        <!--        <meta-data-->
+        <!--            android:name="com.razorpay.ApiKey"-->
+        <!--            android:value="your_key_here" />-->
+
+    </application>
+
+</manifest>
